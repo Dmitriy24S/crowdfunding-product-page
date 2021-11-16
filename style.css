@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700;800;900");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: rgb(242 242 242 / 62%);
+  font-family: "Commissioner", sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  min-width: 375px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+  border-radius: 50px;
+  padding: 2rem;
+  border: none;
+  cursor: pointer;
+}
+/* header */
+header {
+  background-image: linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 52%),
+      rgb(245 246 252 / 0%),
+      rgb(117 19 93 / 0%)
+    ),
+    url(./images/image-hero-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: 338px;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  align-items: center;
+}
+.logo {
+  cursor: pointer;
+}
+.logo img {
+  height: 25px;
+}
+.hamburger-menu {
+  background-image: url("./images/icon-hamburger.svg");
+  width: auto;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 23px;
+  cursor: pointer;
+}
+/* main */
+main {
+  position: relative;
+  height: 300px;
+}
+.container {
+  position: absolute;
+  top: -64px;
+  width: 80%;
+  margin: 0 auto;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.card {
+  border-radius: 7px;
+  background-color: white;
+  position: relative;
+  padding: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+.project-logo {
+  background-image: url(./images/logo-mastercraft.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 56px;
+  width: 56px;
+  left: calc(50% - 3rem);
+  top: -28px;
+}
+.project-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 5rem 3rem 3rem;
+}
+.project-overview__btns {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.project-text__header {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+.project-text__paragraph {
+  /*  */
+}
+/* project overview btns */
+.back-this-project-btn {
+  background-color: hsl(176, 50%, 47%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 2rem 4rem;
+}
+.bookmark-btn {
+  background-color: black;
+  background-image: url(./images/icon-bookmark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.project-tier {
+  border: 1px solid black;
+}
+/* footer */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
