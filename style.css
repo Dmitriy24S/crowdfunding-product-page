@@ -26,6 +26,7 @@ button {
   padding: 2rem;
   border: none;
   cursor: pointer;
+  font-weight: 700;
 }
 /* header */
 header {
@@ -71,9 +72,9 @@ main {
 }
 .container {
   position: absolute;
-  top: -64px;
-  width: 80%;
   margin: 0 auto;
+  width: 80%;
+  top: -64px;
   left: 10%;
   display: flex;
   flex-direction: column;
@@ -88,6 +89,13 @@ main {
   gap: 1.5rem;
   flex-direction: column;
 }
+/* project overview */
+.project-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 5rem 3rem 3rem;
+}
 .project-logo {
   background-image: url(./images/logo-mastercraft.svg);
   background-repeat: no-repeat;
@@ -97,46 +105,142 @@ main {
   left: calc(50% - 3rem);
   top: -28px;
 }
-.project-overview {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 5rem 3rem 3rem;
-}
-.project-overview__btns {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
-}
 .project-text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 .project-text__header {
   font-size: 2.2rem;
   font-weight: 800;
 }
 .project-text__paragraph {
-  /*  */
+  color: hsl(0, 0%, 48%);
+  font-weight: 500;
+  line-height: 1.7;
+  font-size: 1.4rem;
 }
-/* project overview btns */
+/* project overview - btns */
+.project-overview__btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+  justify-content: center;
+}
 .back-this-project-btn {
   background-color: hsl(176, 50%, 47%);
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
-  padding: 2rem 4rem;
+  padding: 1.7rem 12%;
+  width: 100%;
 }
 .bookmark-btn {
   background-color: black;
   background-image: url(./images/icon-bookmark.svg);
   background-repeat: no-repeat;
   background-position: center;
+  width: 60px;
+  height: auto;
 }
+/* project-numbers  */
+.project-numbers {
+  gap: 3rem;
+}
+span {
+  display: block;
+  font-weight: 800;
+  font-size: 2.9rem;
+  color: black;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+  gap: 0.7rem;
+}
+.info:not(:nth-last-child(2)):after {
+  content: "";
+  padding-top: 2rem;
+  margin: 0 auto;
+  width: 30%;
+  border-bottom: 1px solid rgba(185, 184, 184, 0.62);
+}
+/* project-numbers - progress bar */
+.progress-bar-container {
+  border-radius: 50px;
+  background-color: rgb(242 242 242 / 62%);
+  width: 100%;
+}
+.progress-bar {
+  height: 13px;
+  width: 75%;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 50px;
+}
+/* about project */
+.about-project {
+  text-align: left;
+  padding: 5rem 3rem 3rem;
+  gap: 2.5rem;
+}
+/* about project - tiers */
 .project-tier {
-  border: 1px solid black;
+  border: 1px solid hsl(0, 1%, 83%);
+  border-radius: 8px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.amount-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+}
+.select-reward-btn {
+  background-color: hsl(176, 50%, 47%);
+  color: white;
+  width: 70%;
+  padding: 1.5rem 2rem;
+}
+.accent {
+  color: hsl(176, 50%, 47%);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.project-tier-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.project-tier-head h2 {
+  font-size: 1.5rem;
+}
+/* about project - out of stock */
+.out-of-stock {
+  position: relative;
+}
+.out-of-stock:after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.432);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.out-of-stock-btn {
+  background-color: rgb(180, 180, 180);
 }
 /* footer */
 .attribution {
