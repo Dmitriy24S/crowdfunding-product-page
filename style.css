@@ -50,6 +50,7 @@ header {
 }
 .logo {
   cursor: pointer;
+  z-index: 4;
 }
 .logo img {
   height: 25px;
@@ -62,20 +63,61 @@ header {
   background-position: center;
   width: 30px;
   height: 30px;
-  background-size: 30px 23px;
+  background-size: contain;
   cursor: pointer;
+  z-index: 4;
+}
+.hamburger-menu:hover {
+  opacity: 0.9;
+}
+/* header - menu */
+ul {
+  list-style-type: none;
+  text-align: left;
+  background-color: white;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+}
+a:hover {
+  color: hsl(176, 50%, 47%);
+}
+.menu-list {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  left: 10%;
+  right: 10%;
+  top: 11%;
+  border-radius: 8px;
+  box-shadow: -1px 93px 153px 211px #00000066;
+  padding: 1rem 0;
+}
+.menu-list__item {
+  padding: 2rem;
+  padding-left: 1.5rem;
+}
+.menu-list__item:not(:nth-last-child(1)):after {
+  display: block;
+  content: "";
+  border-bottom: 1px solid rgba(185, 184, 184, 0.62);
+  padding-top: 2rem;
+  margin: 0 auto;
+  width: 100%;
 }
 /* main */
 main {
   position: relative;
-  height: 300px;
 }
 .container {
-  position: absolute;
+  position: relative;
   margin: 0 auto;
   width: 80%;
   top: -64px;
-  left: 10%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -124,7 +166,6 @@ main {
 .project-overview__btns {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   align-items: stretch;
   justify-content: center;
 }
@@ -136,13 +177,18 @@ main {
   padding: 1.7rem 12%;
   width: 100%;
 }
+.back-this-project-btn:hover {
+  background-color: hsl(176, 72%, 28%);
+}
 .bookmark-btn {
-  background-color: black;
   background-image: url(./images/icon-bookmark.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 60px;
   height: auto;
+}
+.bookmark-btn:hover {
+  opacity: 0.8;
 }
 /* project-numbers  */
 .project-numbers {
@@ -209,6 +255,9 @@ span {
   width: 70%;
   padding: 1.5rem 2rem;
 }
+.select-reward-btn:hover {
+  background-color: hsl(176, 72%, 28%);
+}
 .accent {
   color: hsl(176, 50%, 47%);
   font-size: 1.3rem;
@@ -228,7 +277,7 @@ span {
 }
 .out-of-stock:after {
   content: " ";
-  z-index: 10;
+  z-index: 3;
   display: block;
   position: absolute;
   height: 100%;
@@ -241,6 +290,20 @@ span {
 }
 .out-of-stock-btn {
   background-color: rgb(180, 180, 180);
+}
+.out-of-stock-btn:hover {
+  background-color: rgb(180, 180, 180);
+}
+/* show  */
+.show {
+  visibility: visible;
+}
+.hamburger-menu.show {
+  background-image: url("./images/icon-close-menu.svg");
+  background-size: contain;
+}
+.show ~ .menu-list {
+  display: block;
 }
 /* footer */
 .attribution {
