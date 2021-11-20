@@ -23,7 +23,6 @@ a {
 button {
   font-family: inherit;
   border-radius: 50px;
-  padding: 2rem;
   border: none;
   cursor: pointer;
   font-weight: 700;
@@ -41,6 +40,7 @@ header {
   background-size: cover;
   width: auto;
   height: 338px;
+  background-attachment: scroll;
 }
 .header-nav {
   display: flex;
@@ -180,10 +180,13 @@ main {
 .back-this-project-btn:hover {
   background-color: hsl(176, 72%, 28%);
 }
-.bookmark-btn {
-  background-image: url(./images/icon-bookmark.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+/* project overview - bookmark btn */
+svg {
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+.bookmark-btn svg path {
   width: 60px;
   height: auto;
 }
@@ -294,16 +297,87 @@ span {
 .out-of-stock-btn:hover {
   background-color: rgb(180, 180, 180);
 }
-/* show  */
+/* pledge selection */
+.pledge-selection-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  visibility: hidden;
+  overflow: scroll;
+  min-width: 375px;
+}
+.pledge-selection {
+  position: absolute;
+  margin: 0 auto;
+  text-align: left;
+  width: 80%;
+  top: 100px;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.pledge-selection-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.modal {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+.close-modal img {
+  width: 18px;
+  vertical-align: middle;
+}
+/* pledge selection radio and card border style */
+input[type="radio"] {
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 6px;
+  background-clip: content-box;
+  border: 1px solid #bbbbbb;
+  border-radius: 25px;
+}
+.selected {
+  border: 1px solid hsl(176, 50%, 47%);
+}
+.selected input[type="radio"]:checked {
+  background-color: hsl(176, 50%, 47%);
+}
+/* show */
 .show {
   visibility: visible;
 }
+.show ~ .menu-list {
+  display: block;
+}
 .hamburger-menu.show {
+  /* when opened, switch to close icon */
   background-image: url("./images/icon-close-menu.svg");
   background-size: contain;
 }
-.show ~ .menu-list {
-  display: block;
+/* disable body scroll when modal active */
+.active-modal {
+  overflow-y: hidden;
 }
 /* footer */
 .attribution {
