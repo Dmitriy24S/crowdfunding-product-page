@@ -23,6 +23,14 @@ closeModalBtn.addEventListener("click", () => {
   body.classList.toggle("active-modal");
 });
 
+// Bookmark btn - style toggle
+
+const bookmarkBtn = document.querySelector(".bookmark-btn");
+
+bookmarkBtn.addEventListener("click", () => {
+  bookmarkBtn.classList.toggle("active-bookmark");
+});
+
 // Project tier selection style toggle
 
 const tiers = document.getElementsByName("tier");

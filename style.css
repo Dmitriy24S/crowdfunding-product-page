@@ -193,6 +193,30 @@ svg {
 .bookmark-btn:hover {
   opacity: 0.8;
 }
+/* bookmark btn - darken on click */
+.bookmark-btn:active svg {
+  fill: hsl(177, 69%, 20%);
+}
+.bookmark-btn:active svg circle {
+  filter: brightness(55%);
+}
+.bookmark-btn:active svg path {
+  filter: brightness(55%);
+}
+/* bookmark btn - move down after click, change colors, add shadow */
+.active-bookmark svg {
+  transform: translateY(2px);
+}
+.active-bookmark svg path {
+  fill: white;
+}
+.active-bookmark svg circle {
+  fill: hsl(176, 72%, 28%);
+}
+.active-bookmark svg {
+  box-shadow: 0 0 6px 4px #99cbb7ed;
+  border-radius: 50%;
+}
 /* project-numbers  */
 .project-numbers {
   gap: 3rem;
