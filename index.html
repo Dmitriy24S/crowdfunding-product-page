@@ -39,7 +39,14 @@
           </div>
           <div class="project-overview__btns">
             <button class="back-this-project-btn">Back this project</button>
-            <button class="bookmark-btn"></button>
+            <button class="bookmark-btn">
+              <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                  <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+                </g>
+              </svg>
+            </button>
           </div>
         </section>
         <section class="card project-numbers">
@@ -107,6 +114,78 @@
         </section>
       </div>
     </main>
+
+    <!-- Select tier modal start -->
+    <section class="pledge-selection-overlay">
+      <div class="card pledge-selection">
+        <div class="pledge-selection-head">
+          <h1 class="project-text__header">Back this Project</h1>
+          <a href="#/" class="close-modal">
+            <img src="images/icon-close-modal.svg" alt="" />
+          </a>
+        </div>
+        <p class="project-text__paragraph">
+          Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
+        </p>
+        <form>
+          <label class="input-container project-tier">
+            <div class="project-tier-head modal">
+              <input type="radio" name="tier" />
+              <div class="project-tier-head">
+                <h2 class="tier-name">Pledge with no reward</h2>
+              </div>
+            </div>
+            <p class="project-text__paragraph">
+              Choose to support us without a reward if you simply believe in our project. As a
+              backer, you will be signed up to receive product updates via email.
+            </p>
+          </label>
+          <label class="input-container project-tier">
+            <div class="project-tier-head modal">
+              <input type="radio" name="tier" />
+              <div class="project-tier-head">
+                <h2 class="tier-name">Bamboo Stand</h2>
+                <span class="accent">Pledge $25 or more</span>
+              </div>
+            </div>
+            <p class="project-text__paragraph">
+              You get an ergonomic stand made of natural bamboo. You've helped us launch our
+              promotional campaign, and you’ll be added to a special Backer member list.
+            </p>
+            <div class="amount-left"><span>101</span>left</div>
+          </label>
+          <label class="input-container project-tier">
+            <div class="project-tier-head modal">
+              <input type="radio" name="tier" />
+              <div class="project-tier-head">
+                <h2 class="tier-name">Black Edition Stand</h2>
+                <span class="accent">Pledge $75 or more</span>
+              </div>
+            </div>
+            <p class="project-text__paragraph">
+              You get a Black Special Edition computer stand and a personal thank you. You’ll be
+              added to our Backer member list. Shipping is included.
+            </p>
+            <div class="amount-left"><span>64</span>left</div>
+          </label>
+          <label class="input-container project-tier project-tier out-of-stock">
+            <div class="project-tier-head modal">
+              <input type="radio" name="tier" disabled />
+              <div class="project-tier-head">
+                <h2 class="tier-name">Mahogany Special Edition</h2>
+                <span class="accent">Pledge $200 or more</span>
+              </div>
+            </div>
+            <p class="project-text__paragraph">
+              You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank
+              you. You’ll be added to our Backer member list. Shipping is included.
+            </p>
+            <div class="amount-left"><span>0</span>left</div>
+          </label>
+        </form>
+      </div>
+    </section>
+    <!-- Select tier modal end -->
 
     <!-- Selected pledge start -->
     <!-- Enter your pledge $75 Continue -->
