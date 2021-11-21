@@ -387,7 +387,106 @@ input[type="radio"] {
 .selected input[type="radio"]:checked {
   background-color: hsl(176, 50%, 47%);
 }
-/* show */
+/* footer */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* amount confirmation section */
+.enter-amount {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  align-items: normal;
+  width: 100%;
+  gap: 2rem;
+}
+.enter-amount:before {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid rgba(185, 184, 184, 0.62);
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+.enter-amount-input-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.enter-amount-input-container input {
+  position: relative;
+  width: 30%;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 50px;
+  border: 1px solid rgba(185, 184, 184, 0.62);
+  width: 50%;
+  margin-right: 1rem;
+  padding-left: 2rem;
+}
+.enter-amount-input-container button {
+  width: auto;
+  width: 55%;
+  padding: 1.7rem 0;
+}
+.enter-amount-input-container input:focus-visible {
+  outline: 1px solid hsl(176, 50%, 47%);
+}
+.enter-amount-input::before {
+  position: absolute;
+  content: "$";
+  color: rgba(185, 184, 184, 0.62);
+  display: block;
+  left: 2rem;
+  top: 1.2rem;
+  font-size: 2.2rem;
+}
+.enter-amount-input + span:after {
+  position: absolute;
+  content: "$";
+  color: rgba(185, 184, 184, 0.62);
+  top: 1.7rem;
+  right: 85%;
+  font-size: 1.6rem;
+}
+/* thanks msg */
+.thanks-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 375px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 8;
+  overflow: scroll;
+  visibility: hidden;
+}
+.thanks {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  top: 100px;
+  left: 10%;
+  gap: 2.5rem;
+}
+.thanks img {
+  width: 60px;
+  height: auto;
+}
+.thanks button {
+  width: auto;
+}
+/* show / hide elements */
 .show {
   visibility: visible;
 }
@@ -399,15 +498,10 @@ input[type="radio"] {
   background-image: url("./images/icon-close-menu.svg");
   background-size: contain;
 }
+.selected .enter-amount {
+  display: flex;
+}
 /* disable body scroll when modal active */
 .active-modal {
   overflow-y: hidden;
-}
-/* footer */
-.attribution {
-  font-size: 1.1rem;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
