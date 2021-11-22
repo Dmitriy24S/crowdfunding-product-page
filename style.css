@@ -67,9 +67,9 @@ header {
   cursor: pointer;
   z-index: 4;
 }
-.hamburger-menu:hover {
-  opacity: 0.9;
-}
+/* .hamburger-menu:hover { */
+/* opacity: 0.9; */
+/* } */
 /* header - menu */
 ul {
   list-style-type: none;
@@ -82,9 +82,6 @@ a {
   text-decoration: none;
   color: inherit;
   padding: 1rem;
-}
-a:hover {
-  color: hsl(176, 50%, 47%);
 }
 .menu-list {
   display: none;
@@ -177,10 +174,10 @@ main {
   padding: 1.7rem 12%;
   width: 100%;
 }
-.back-this-project-btn:hover {
-  background-color: hsl(176, 72%, 28%);
-}
 /* project overview - bookmark btn */
+.bookmark-text {
+  display: none;
+}
 svg {
   display: block;
   margin: auto;
@@ -189,9 +186,6 @@ svg {
 .bookmark-btn svg path {
   width: 60px;
   height: auto;
-}
-.bookmark-btn:hover {
-  opacity: 0.8;
 }
 /* bookmark btn - darken on click */
 .bookmark-btn:active svg {
@@ -242,6 +236,11 @@ span {
   width: 30%;
   border-bottom: 1px solid rgba(185, 184, 184, 0.62);
 }
+.info-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
 /* project-numbers - progress bar */
 .progress-bar-container {
   border-radius: 50px;
@@ -276,14 +275,16 @@ span {
   font-weight: 500;
   color: hsl(0, 0%, 48%);
 }
+.amount-btn-wrap {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
 .select-reward-btn {
   background-color: hsl(176, 50%, 47%);
   color: white;
   width: 70%;
   padding: 1.5rem 2rem;
-}
-.select-reward-btn:hover {
-  background-color: hsl(176, 72%, 28%);
 }
 .accent {
   color: hsl(176, 50%, 47%);
@@ -504,4 +505,176 @@ input[type="radio"] {
 /* disable body scroll when modal active */
 .active-modal {
   overflow-y: hidden;
+}
+/* desktop style */
+@media (min-width: 768px) {
+  .card {
+    padding: 3rem 4rem;
+  }
+  /* header */
+  .menu-list {
+    display: flex;
+    position: relative;
+    box-shadow: none;
+    color: white;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+  ul {
+    background-color: transparent;
+    font-weight: 500;
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .menu-list__item:not(:nth-last-child(1)):after {
+    display: none;
+  }
+  a:hover {
+    color: white;
+    text-decoration: underline;
+    opacity: 0.9;
+  }
+  /* project overview */
+  .project-overview {
+    padding: 5rem 5rem 3rem;
+  }
+  .project-overview__btns {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .back-this-project-btn {
+    width: auto;
+    padding: 1.7rem 5rem;
+  }
+  /* project overview - bookmark btn */
+  .bookmark-text {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.7rem 2rem;
+  }
+  .bookmark-text {
+    color: gray;
+  }
+  .bookmark-btn {
+    display: flex;
+    align-items: center;
+  }
+  .active-bookmark .bookmark-text {
+    color: hsl(176, 50%, 47%);
+  }
+  .active-bookmark {
+    background-color: #f2f7f7;
+  }
+  /* project numbers */
+  .project-numbers {
+    padding: 5rem 5rem 3rem;
+    padding-bottom: 5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .info:not(:nth-last-child(2)):after {
+    padding-top: 0;
+    border-bottom: none;
+    border-right: 1px solid rgba(185, 184, 184, 0.62);
+    padding-right: 8rem;
+  }
+  .progress-bar-container {
+    margin-top: 1rem;
+  }
+  .info {
+    flex-direction: row;
+    gap: 0;
+  }
+  .info-text-wrap {
+    text-align: left;
+  }
+  /* about project */
+  .about-project {
+    padding: 5rem 5rem 3rem;
+  }
+  .select-reward-btn {
+    width: auto;
+    padding: 1.7rem 5rem;
+  }
+  /* pledge selection modal */
+  a.close-modal {
+    position: relative;
+    right: -21px;
+    top: -11px;
+  }
+  .project-tier-head {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  form label {
+    position: relative;
+  }
+  form .amount-left {
+    position: relative;
+    align-self: end;
+    position: absolute;
+    top: 2rem;
+  }
+  form .amount-left span {
+    font-size: 2rem;
+  }
+  /* pledge-selection modal - enter amount  */
+  .enter-amount {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .enter-amount p {
+    font-size: 1.6rem;
+  }
+  .selected .enter-amount {
+    border-top: 1px solid rgba(185, 184, 184, 0.62);
+    padding-top: 2.2rem;
+  }
+  .enter-amount:before {
+    display: none;
+  }
+  .enter-amount-input-container button {
+    width: auto;
+    padding: 1.7rem 5rem;
+  }
+  .enter-amount-input-container input {
+    width: auto;
+    padding: 1.7rem 5rem;
+  }
+  .amount-btn-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  /* thanks modal*/
+  .thanks {
+    width: 62%;
+    top: 33%;
+    left: 20%;
+  }
+}
+@media (hover) {
+  a:hover {
+    color: hsl(176, 50%, 47%);
+  }
+  .hamburger-menu:hover {
+    opacity: 0.9;
+  }
+  .bookmark-btn:hover {
+    opacity: 0.8;
+  }
+  .back-this-project-btn:hover {
+    background-color: hsl(176, 72%, 28%);
+  }
+  .select-reward-btn:hover {
+    background-color: hsl(176, 72%, 28%);
+  }
 }

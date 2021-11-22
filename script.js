@@ -23,9 +23,14 @@ closeModalBtn.addEventListener("click", () => {
 
 // Bookmark btn - style toggle
 const bookmarkBtn = document.querySelector(".bookmark-btn");
+const bookmarkText = document.getElementsByClassName("bookmark-text");
 
 bookmarkBtn.addEventListener("click", () => {
   bookmarkBtn.classList.toggle("active-bookmark");
+  if (bookmarkText[0].textContent === "Bookmarked") {
+    return (bookmarkText[0].textContent = "Bookmark");
+  }
+  bookmarkText[0].textContent = "Bookmarked";
 });
 
 // Project tier selection style toggle
