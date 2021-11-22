@@ -55,10 +55,12 @@ const thanksCard = document.querySelector(".thanks-container");
 const gotItBtns = document.querySelectorAll(".got-it-btn");
 
 gotItBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    thanksCard.classList.toggle("show");
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
     // close other modals before showing msg
     modal.classList.remove("show");
     body.classList.remove("active-modal");
+    // show msg
+    thanksCard.classList.toggle("show");
   });
 });
